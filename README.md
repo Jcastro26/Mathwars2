@@ -1,2 +1,2 @@
 # MATH-WARS
-//GABO FALSO
+Juego para aprender matematicas de forma divertida
