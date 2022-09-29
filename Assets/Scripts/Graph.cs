@@ -13,10 +13,13 @@ public class Graph : MonoBehaviour
     [SerializeField]
     float dominio = 6f;
 
-    void Awake(){
+    // void Awake(){
+    //     Graficar();
+    // }
+    void onEnable(){
         Graficar();
     }
-    void Graficar(){
+    public void Graficar(){
                 //3f es el dominio de la funcion , la funcion se muestra de 
         float step = dominio/resolution;
         //vector.one= (1,1,1)
