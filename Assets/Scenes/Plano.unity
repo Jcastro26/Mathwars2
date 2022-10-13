@@ -796,17 +796,25 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6106644336061254185, guid: 3f023a156b695c646a5fa136f140d80e, type: 3}
+      propertyPath: m_DrawMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6106644336061254185, guid: 3f023a156b695c646a5fa136f140d80e, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6106644336061254190, guid: 3f023a156b695c646a5fa136f140d80e, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6106644336061254190, guid: 3f023a156b695c646a5fa136f140d80e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.97
+      value: -8.12
       objectReference: {fileID: 0}
     - target: {fileID: 6106644336061254190, guid: 3f023a156b695c646a5fa136f140d80e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.47
+      value: -0.22
       objectReference: {fileID: 0}
     - target: {fileID: 6106644336061254190, guid: 3f023a156b695c646a5fa136f140d80e, type: 3}
       propertyPath: m_LocalPosition.z
