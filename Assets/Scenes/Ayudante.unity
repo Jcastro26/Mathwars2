@@ -367,9 +367,10 @@ MonoBehaviour:
   - "Newton:  \xBFQu\xE9 carajos hago aqu\xED? "
   - 'Newton: Intuyo que deseas mi ayuda, y por supuesto soy el mejor de todos :)'
   - "Newton: Haber... por d\xF3nde empiezo\nHm...."
-  - "Newton:  \xA1Sabias que las funciones son fundamentales para la compresi\xF3n
-    de los calculos avanzados?"
-  - "Newton:  Es por ello que yo y otros de mis compa\xF1eros, te ayudaremos a estudiar"
+  - "Newton:  \xBFSabias que las funciones son fundamentales para la compresi\xF3n
+    de los c\xE1lculos avanzados?"
+  - "Newton:  Es por ello que junto con otros de mis compa\xF1eros, te ayudaremos
+    a estudiar"
   - "Newton:  Hemos dise\xF1ado un metodo did\xE1ctico para que todos se sientan
     atraidos por las matematicas"
   - "Newton:  Donde podr\xE1s atacar a tu oponentes usando funciones \xA1UNA GUERRA
@@ -658,7 +659,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.014, y: 0.053666666}
   m_AnchorMax: {x: 0.97616667, y: 0.9637778}
-  m_AnchoredPosition: {x: 9.5, y: -9.502472}
+  m_AnchoredPosition: {x: 9.5, y: -9.502441}
   m_SizeDelta: {x: 73, y: 96.994995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &998012361
