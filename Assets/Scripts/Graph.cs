@@ -12,14 +12,15 @@ public class Graph : MonoBehaviour
     int resolution = 10;
     [SerializeField]
     float dominio = 6f;
-
+    public String funcion="seno";
     // void Awake(){
     //     Graficar();
     // }
     void onEnable(){
-        Graficar();
+        
+        Graficar(this.funcion);
     }
-    public void Graficar(){
+    public void Graficar(String funcion){
                 //3f es el dominio de la funcion , la funcion se muestra de 
         float step = dominio/resolution;
         //vector.one= (1,1,1)
@@ -35,7 +36,15 @@ public class Graph : MonoBehaviour
 
             // hace una funcion lineal f(x)=y=x 
             //nota mental= aca se puede poder un metodo que modifique la funcion dependiendo de un parametro
-            position.y= coseno(position.x); //SENO
+            if(funcion=="seno"){
+                    position.y= seno(position.x)+1;
+            }
+            if(funcion=="coseno"){
+                    position.y= coseno(position.x);
+            }
+            if(funcion=="cuadratica"){
+                position.y= (( (cuadratica(position.x ) )/5)-1)*-1;
+            }
             //position.y=position.x; // funcion lineal y=x
 
             //asigna el vector posicion a el punto 
@@ -57,4 +66,5 @@ public class Graph : MonoBehaviour
     public float coseno(double x){
         return (float) Math.Cos(Math.PI*x);
     }
+
 }
