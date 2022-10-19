@@ -8,7 +8,7 @@ public class Graph : MonoBehaviour
 	Transform PointPrefab;
     //crea un slider ( por el rango) en la interfaz del script que modifica la resolucion
     //en otras palabras la cantidad de cuadrados que se dibujasn
-    [SerializeField,Range(10,200)]
+    [SerializeField,Range(10,500)]
     int resolution = 10;
     [SerializeField]
     float dominio = 6f;
@@ -45,6 +45,9 @@ public class Graph : MonoBehaviour
             if(funcion=="cuadratica"){
                 position.y= (( (cuadratica(position.x ) )/5)-1)*-1;
             }
+            if(funcion=="tangente"){
+                position.y= (( (tangente(position.x ) )));
+            }           
             //position.y=position.x; // funcion lineal y=x
 
             //asigna el vector posicion a el punto 
@@ -66,5 +69,7 @@ public class Graph : MonoBehaviour
     public float coseno(double x){
         return (float) Math.Cos(Math.PI*x);
     }
-
+    public float tangente(double x){
+        return (float) Math.Tan(Math.PI*x);
+    }
 }
