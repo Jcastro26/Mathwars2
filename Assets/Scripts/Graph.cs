@@ -22,6 +22,20 @@ public class Graph : MonoBehaviour
     }
     public void Graficar(String funcion){
                 //3f es el dominio de la funcion , la funcion se muestra de 
+            switch(funcion){
+                case "seno":
+                     resolution=300;
+                    break;
+                case "coseno":
+                     resolution=300;
+                    break;
+                case "cuadratica":
+                     resolution=300;
+                    break;
+                case "tangente":
+                    resolution=750;
+                    break;
+            }     
         float step = dominio/resolution;
         //vector.one= (1,1,1)
         var scale = Vector3.one*step;
@@ -36,18 +50,21 @@ public class Graph : MonoBehaviour
 
             // hace una funcion lineal f(x)=y=x 
             //nota mental= aca se puede poder un metodo que modifique la funcion dependiendo de un parametro
-            if(funcion=="seno"){
+            switch(funcion){
+                case "seno":
                     position.y= seno(position.x)+1;
-            }
-            if(funcion=="coseno"){
+                    break;
+                case "coseno":
                     position.y= coseno(position.x);
+                    break;
+                case "cuadratica":
+                    position.y= (( (cuadratica(position.x ) )/5)-1)*-1;
+                    break;
+                case "tangente":
+                    position.y= (( (tangente(position.x ) )));
+                    break;
             }
-            if(funcion=="cuadratica"){
-                position.y= (( (cuadratica(position.x ) )/5)-1)*-1;
-            }
-            if(funcion=="tangente"){
-                position.y= (( (tangente(position.x ) )));
-            }           
+   
             //position.y=position.x; // funcion lineal y=x
 
             //asigna el vector posicion a el punto 
