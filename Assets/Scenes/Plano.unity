@@ -669,9 +669,8 @@ GameObject:
   - component: {fileID: 670272991}
   - component: {fileID: 670272993}
   - component: {fileID: 670272992}
-  - component: {fileID: 670272994}
   m_Layer: 0
-  m_Name: barra de vida
+  m_Name: barradevida
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -735,20 +734,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 670272990}
   m_CullTransparentMesh: 1
---- !u!114 &670272994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 670272990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88272937fdce4c74bb7cd9e2e143c7a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBar: {fileID: 670272992}
-  healthAmount: 100
 --- !u!4 &745272292 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6106644336061254190, guid: 3f023a156b695c646a5fa136f140d80e, type: 3}
@@ -1596,6 +1581,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95b442e258f5f6e43940c3adb71335f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &1377668737
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377668733}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &1467964895
 GameObject:
   m_ObjectHideFlags: 0
@@ -1607,6 +1613,8 @@ GameObject:
   - component: {fileID: 1467964896}
   - component: {fileID: 1467964897}
   - component: {fileID: 1467964898}
+  - component: {fileID: 1467964899}
+  - component: {fileID: 1467964900}
   m_Layer: 0
   m_Name: barcoenemigo
   m_TagString: Untagged
@@ -1695,9 +1703,44 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.16649015, y: -0.029693104}
-  m_Size: {x: 8.001101, y: 2.246742}
+  m_Offset: {x: 0.309843, y: 0.07566126}
+  m_Size: {x: 9.739716, y: 3.3002906}
   m_Direction: 1
+--- !u!50 &1467964899
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467964895}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!114 &1467964900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467964895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88272937fdce4c74bb7cd9e2e143c7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 670272992}
+  healthAmount: 100
 --- !u!1 &1479643670
 GameObject:
   m_ObjectHideFlags: 0
