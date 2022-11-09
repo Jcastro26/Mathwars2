@@ -89,4 +89,5 @@ public class Graph : MonoBehaviour
     public float tangente(double x){
         return (float) Math.Tan(Math.PI*x);
     }
+
 }
