@@ -31,6 +31,12 @@ public class Dialog_Newtu : MonoBehaviour
          {
             NextDialogueLine();
          }
+          else //para dejar de tipear y muestre de una las lineas completas
+         {
+            StopAllCoroutines();
+            dialogueText.text = dialogueLines[lineIndex];
+
+         }
          
        }
 
@@ -41,6 +47,7 @@ public class Dialog_Newtu : MonoBehaviour
          dialoguePanel.SetActive(true); // muestra el texto del panel
          dialogueMark.SetActive(false); // desactiva la negacion que se usó con el signo de exclamación ya que inicó la conver.
          lineIndex = 0; // para que con cada cambio de linea de texto se muestre la primera linea de cada texto
+         Time.timeScale = 0f; //para que cuando inicie el dialogo no se mueva
          StartCoroutine(ShowLine());
    }
 
@@ -57,6 +64,7 @@ public class Dialog_Newtu : MonoBehaviour
             didDialogueStart = false;
             dialoguePanel.SetActive(false);
             dialogueMark.SetActive(true);
+            Time.timeScale = 1f;
           }
     }
 
