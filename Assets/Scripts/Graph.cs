@@ -11,7 +11,7 @@ public class Graph : MonoBehaviour
     [SerializeField,Range(10,500)]
     int resolution = 10;
     [SerializeField]
-    float dominio = 6f;
+    float dominio = 2f;
     public String funcion="seno";
     // void Awake(){
     //     Graficar();
@@ -52,7 +52,7 @@ public class Graph : MonoBehaviour
             //nota mental= aca se puede poder un metodo que modifique la funcion dependiendo de un parametro
             switch(funcion){
                 case "seno":
-                    position.y= seno(position.x)+1;
+                    position.y= seno(position.x);
                     break;
                 case "coseno":
                     position.y= coseno(position.x);
@@ -78,7 +78,8 @@ public class Graph : MonoBehaviour
     }
     //hacer objeto de cada uno con sus atributos
     public float seno(double x){
-        return (float) Math.Sin(Math.PI*x);
+        //Math.Sin((Math.PI*x)-((Math.PI*0.5)));
+        return (float) Math.Sin((Math.PI*x));
     }
     public float cuadratica(double x){
         return (float) Math.Pow(x,2);
@@ -89,5 +90,9 @@ public class Graph : MonoBehaviour
     public float tangente(double x){
         return (float) Math.Tan(Math.PI*x);
     }
+    // idea nueva funcion return (float) 1/x proporcionalidad inversa
+    // radical raiz y mirar como tomar solo los valores positivos o algo pro el estilo 
+    //exponencial falta agregar
+    //logaritmica 
 
 }
