@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 using System;
+using UnityEditor;
 public class Graph : MonoBehaviour
 {
 	[SerializeField]
@@ -13,29 +16,52 @@ public class Graph : MonoBehaviour
     [SerializeField]
     float dominio = 2f;
     public String funcion="seno";
+    public Button btnClick;
+    public TMP_InputField amplitudfield;
+    public float amplitud;
+    public TMP_InputField periodofield;
+    public float periodo;
+    public TMP_InputField movhozfield;
+    public float movhoz;
     // void Awake(){
     //     Graficar();
     // }
-    void onEnable(){
+    //funciona onlick() unity interfaz
+    // void onEnable(){
         
-        Graficar(this.funcion);
+    //     //Graficar(this.funcion);
+    // }
+    private void Start(){
+        //listener click
+        btnClick.onClick.AddListener(Graficar);
     }
-    public void Graficar(String funcion){
+    public void GetInput(){
+        Debug.Log("Log input: "+amplitudfield.text);
+    } 
+    public void Graficar(){
+        //EditorUtility.DisplayDialog("a","Aguacate","sssas");  <-- dialogo de unity que se puede usar para avisar de errores al hacer input
                 //3f es el dominio de la funcion , la funcion se muestra de 
-            switch(funcion){
-                case "seno":
-                     resolution=300;
-                    break;
-                case "coseno":
-                     resolution=300;
-                    break;
-                case "cuadratica":
-                     resolution=300;
-                    break;
-                case "tangente":
-                    resolution=750;
-                    break;
-            }     
+        // si no se ha ingresado nada en el input field se pone en 1 por default        
+            if( amplitudfield.text==null ||amplitudfield.text==""){
+     
+          amplitudfield.text = "1";  
+          }
+          if( periodofield.text==null ||periodofield.text==""){
+     
+          periodofield.text = "1";  
+          }
+          if( movhozfield.text==null ||movhozfield.text==""){
+     
+          movhozfield.text = "0";  
+          }
+                
+                
+            this.amplitud=float.Parse(amplitudfield.text);      
+            this.movhoz=float.Parse(movhozfield.text);    
+            this.periodo=float.Parse(periodofield.text);
+        if(amplitud>=3){
+            resolution=900;
+        }
         float step = dominio/resolution;
         //vector.one= (1,1,1)
         var scale = Vector3.one*step;
@@ -52,7 +78,7 @@ public class Graph : MonoBehaviour
             //nota mental= aca se puede poder un metodo que modifique la funcion dependiendo de un parametro
             switch(funcion){
                 case "seno":
-                    position.y= seno(position.x);
+                    position.y= amplitud*seno(periodo*position.x);
                     break;
                 case "coseno":
                     position.y= coseno(position.x);
@@ -70,6 +96,7 @@ public class Graph : MonoBehaviour
             //asigna el vector posicion a el punto 
             point.localPosition = position;
             //modifica la escala del punto *2f hace que sea mas grandes los cubos
+
             point.localScale = scale*3f;
             //hace que el padre sea el objeto graph (atra vez del atributo transform)
             point.SetParent(transform,false);
@@ -79,7 +106,7 @@ public class Graph : MonoBehaviour
     //hacer objeto de cada uno con sus atributos
     public float seno(double x){
         //Math.Sin((Math.PI*x)-((Math.PI*0.5)));
-        return (float) Math.Sin((Math.PI*x));
+        return (float) Math.Sin((Math.PI*x)+((Math.PI*movhoz)/2));
     }
     public float cuadratica(double x){
         return (float) Math.Pow(x,2);
