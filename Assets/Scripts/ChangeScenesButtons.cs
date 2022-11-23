@@ -9,7 +9,7 @@ public class ChangeScenesButtons : MonoBehaviour
     void Start(){
 
     }
-    public void LoadScene(int sceneName){
-        SceneManager.LoadScene(sceneName);
+     public void LoadScene(int sceneName){
+         SceneManager.LoadScene(sceneName);
     }
 }
