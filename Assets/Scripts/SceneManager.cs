@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Registro : MonoBehaviour
+public class SceneManager : MonoBehaviour
 {
-     [SerializeField] private InputField m_userNameImputd      = null;
-     [SerializeField] private InputField m_userEmailImputd     = null;
-     [SerializeField] private InputField m_userPasswortImputd  = null;
-     [SerializeField] private InputField m_userPasswort2Imputd = null;
+     [SerializeField] private InputField m_userNameInput      = null;
+     [SerializeField] private InputField m_userEmailInput     = null;
+     [SerializeField] private InputField m_userPasswortInput  = null;
+     [SerializeField] private InputField m_userPasswort2Input = null;
      [SerializeField] private Text       m_errorText          = null;
      [SerializeField] private GameObject m_registroUi          = null;
      [SerializeField] private GameObject m_LoginUI             = null;
@@ -21,13 +21,13 @@ public class Registro : MonoBehaviour
      }
 
     
-     public void SubitLogin(){
+     public void SubnitRegister(){
     
-       if (m_userPasswortImputd.text == m_userPasswort2Imputd.text)//si clave 1 es igual a clave 2
+       if (m_userPasswortInput.text == m_userPasswort2Input.text)//si clave 1 es igual a clave 2
       {
           m_errorText.text="Procesando......";
 
-          m_networkManager.CreateUser(m_userNameImputd.text,m_userEmailImputd.text,m_userPasswortImputd.text,delegate(Response response)//creando Usuario
+          m_networkManager.CreateUser(m_userNameInput.text,m_userEmailInput.text,m_userPasswortInput.text,delegate(Response response)//creando Usuario
           {
            m_errorText.text=response.message;
           });
