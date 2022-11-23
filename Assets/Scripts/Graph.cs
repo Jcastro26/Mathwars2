@@ -45,7 +45,7 @@ public class Graph : MonoBehaviour
         btnClick.onClick.AddListener(botonOprimido);
     }
     void Update(){
-        
+        // cuando se oprime destruye el grafico anterior
         if(oprimido){
             var puntos = GameObject.FindGameObjectsWithTag ("punto");
             foreach(var punto in puntos){
@@ -69,16 +69,17 @@ public class Graph : MonoBehaviour
             this.amplitud=float.Parse(amplitudfield.text);      
             this.movhoz=float.Parse(movhozfield.text);    
             this.periodo=float.Parse(periodofield.text);
+            //aumenta resolucion dependiendo de la amplitud
             if(amplitud>=3){
                 resolution=900;
             }
             next_spawn=0;
             entrargraf=true;
         }
+        //while con timer que crea animacion de la grafica, cada llamado a la funcion grafica un punto y se va actualizando i por cada ciclo
         while(entrargraf&&Time.time>next_spawn&&i<resolution){
         Graficar();
         i++;
-        
         }    
         
         oprimido=false;

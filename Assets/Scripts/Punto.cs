@@ -16,6 +16,7 @@ public class Punto : MonoBehaviour
             
             if (other.tag =="barcoenemigo"){
                 ccollider=other;
+                //forma de encontrar objetos con el tag, y se obtiene el script de esta forma
                 Graph grafico = GameObject.FindGameObjectWithTag("graphseno").GetComponent<Graph>();
                 grafico.entrargraf=false;
                 grafico.i=0;
