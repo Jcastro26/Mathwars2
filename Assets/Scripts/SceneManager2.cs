@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-public class SceneManager : MonoBehaviour
+using TMPro;
+public class SceneManager2 : MonoBehaviour
 {
-     [SerializeField] private InputField m_userNameInput      = null;
-     [SerializeField] private InputField m_userEmailInput     = null;
-     [SerializeField] private InputField m_userPasswortInput  = null;
-     [SerializeField] private InputField m_userPasswort2Input = null;
+     [SerializeField] public TMP_InputField m_userNameInput      = null;
+     [SerializeField] private TMP_InputField m_userEmailInput     = null;
+     [SerializeField] private TMP_InputField m_userPasswortInput  = null;
+     [SerializeField] private TMP_InputField m_userPasswort2Input = null;
      [SerializeField] private Text       m_errorText          = null;
      [SerializeField] private GameObject m_registroUi          = null;
      [SerializeField] private GameObject m_LoginUI             = null;

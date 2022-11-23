@@ -2577,10 +2577,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c17c75361f62046b21dc15845b9d0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_userNameImput: {fileID: 0}
-  m_userEmailImput: {fileID: 0}
-  m_userPasswortImput: {fileID: 0}
-  m_userPasswort2Imput: {fileID: 0}
+  m_userNameInput: {fileID: 1906351154}
+  m_userEmailInput: {fileID: 517111358}
+  m_userPasswortInput: {fileID: 1888258834}
+  m_userPasswort2Input: {fileID: 1898594937}
   m_errorText: {fileID: 1268345662}
   m_registroUi: {fileID: 1928598071}
   m_LoginUI: {fileID: 40165458}
