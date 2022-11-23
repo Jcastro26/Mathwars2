@@ -7,6 +7,9 @@ TagManager:
   - audio
   - barradevida
   - Mensaje
+  - punto
+  - graphseno
+  - barcoenemigo
   layers:
   - Default
   - TransparentFX

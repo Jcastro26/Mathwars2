@@ -909,7 +909,7 @@ GameObject:
   - component: {fileID: 440063722}
   m_Layer: 0
   m_Name: Graph seno
-  m_TagString: Untagged
+  m_TagString: graphseno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -952,6 +952,9 @@ MonoBehaviour:
   periodo: 1
   movhozfield: {fileID: 667608792}
   movhoz: 1
+  next_spawn: 0
+  i: 0
+  entrargraf: 0
 --- !u!1 &512636567
 GameObject:
   m_ObjectHideFlags: 0
@@ -3722,7 +3725,7 @@ GameObject:
   - component: {fileID: 1467964900}
   m_Layer: 0
   m_Name: barcoenemigo
-  m_TagString: Untagged
+  m_TagString: barcoenemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3735,7 +3738,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1467964895}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 415.55, y: -10.87, z: 1.0003906}
+  m_LocalPosition: {x: 354, y: 20, z: 1.0003906}
   m_LocalScale: {x: 13.816578, y: 22.133244, z: 4.6397038}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5885,6 +5888,10 @@ PrefabInstance:
     - target: {fileID: 6106644336061254184, guid: 3f023a156b695c646a5fa136f140d80e, type: 3}
       propertyPath: m_Name
       value: Point
+      objectReference: {fileID: 0}
+    - target: {fileID: 6106644336061254184, guid: 3f023a156b695c646a5fa136f140d80e, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6106644336061254185, guid: 3f023a156b695c646a5fa136f140d80e, type: 3}
       propertyPath: m_Enabled

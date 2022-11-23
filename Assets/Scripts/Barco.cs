@@ -21,7 +21,6 @@ public class Barco : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.E)){
             TakeDamage(20);
         }
-
     }
 
 
@@ -32,7 +31,9 @@ public class Barco : MonoBehaviour
         healthBar.fillAmount =healthAmount/100;
     }
     public void OnTriggerEnter2D(Collider2D other){
-        Debug.Log("hit detected");
         this.TakeDamage(1);
+
     }
 }
+
+

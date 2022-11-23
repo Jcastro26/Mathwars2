@@ -23,13 +23,13 @@ public class Graph : MonoBehaviour
     public float periodo;
     public TMP_InputField movhozfield;
     public float movhoz;
-    float next_spawn;
+    public float next_spawn;
     Vector3 position;
     Vector3 scale;
     float step;
     Boolean oprimido;
-    int i;
-    Boolean entrargraf;
+    public int i;
+    public Boolean entrargraf;
     // void Awake(){
     //     Graficar();
     // }
@@ -47,7 +47,11 @@ public class Graph : MonoBehaviour
     void Update(){
         
         if(oprimido){
-            
+            var puntos = GameObject.FindGameObjectsWithTag ("punto");
+            foreach(var punto in puntos){
+                        Destroy(punto);
+            }
+            i=0;
             Debug.Log("Hola de mar");
             // si no se ha ingresado nada en el input field se pone en default
             if( amplitudfield.text==null ||amplitudfield.text==""){
@@ -74,6 +78,7 @@ public class Graph : MonoBehaviour
         while(entrargraf&&Time.time>next_spawn&&i<resolution){
         Graficar();
         i++;
+        
         }    
         
         oprimido=false;
@@ -83,20 +88,13 @@ public class Graph : MonoBehaviour
     public  void Graficar(){
         //EditorUtility.DisplayDialog("a","Aguacate","sssas");  <-- dialogo de unity que se puede usar para avisar de errores al hacer input
                 //3f es el dominio de la funcion , la funcion se muestra de 
-        Debug.Log("graficar llamada");        
-        
         next_spawn=Time.time+1.0f;      
-         Debug.Log("Time. time= "+Time.time+"  next_spawn"+next_spawn+"  i = "+i);         
-        
         //cantidad de cubos
-            Debug.Log("while entrao");
             step = dominio/resolution;
             var scale = new Vector3(1,1,1)*step;
             var position= Vector3.zero; 
-        
-           
-            
                 Transform point=  Instantiate(PointPrefab);
+                point.tag="punto";
                 //vector3.right mirando a la derecha (1,0,0) dividido pro 5 f para que se junten, +0.5 para llenar y -1f para moverlo en el eje x
                 //  si a step se le resta la mitad del dominio ej:-1.5f grafica a la izquierda y derecha del orgigen, sino grafica desde ese punto a la derecha
                 position.x = ((i) + 0.5f)*step ; 
@@ -154,4 +152,5 @@ public class Graph : MonoBehaviour
     public void botonOprimido(){
         oprimido=true;
     }
+
 }
