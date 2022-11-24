@@ -47,7 +47,7 @@ public class Dialog_Newtu : MonoBehaviour
          dialoguePanel.SetActive(true); // muestra el texto del panel
          dialogueMark.SetActive(false); // desactiva la negacion que se usó con el signo de exclamación ya que inicó la conver.
          lineIndex = 0; // para que con cada cambio de linea de texto se muestre la primera linea de cada texto
-         Time.timeScale = 1f; //para que cuando inicie el dialogo no se mueva
+         Time.timeScale = 0.5f; //para que cuando inicie el dialogo no se mueva
          StartCoroutine(ShowLine());
    }
 
