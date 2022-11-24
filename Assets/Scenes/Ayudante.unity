@@ -661,9 +661,6 @@ MonoBehaviour:
   - "Newton: \xBFQu\xE9 es la intersecci\xF3n en el eje y?\n"
   - 'Newton: Es el punto donde interseca en el eje de las coordenadas.'
   - 'Newton:'
-  - 'Newton:'
-  - 'Newton:'
-  - 'Newton:'
 --- !u!1 &186001534
 GameObject:
   m_ObjectHideFlags: 0
