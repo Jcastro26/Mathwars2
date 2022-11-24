@@ -11,7 +11,7 @@ public class Barco : MonoBehaviour
 
     // Start is called before the first frame update
     void Start(){
-        TakeDamage(10);
+        
     }
 
     // Update is called once per frame
@@ -31,7 +31,7 @@ public class Barco : MonoBehaviour
         healthBar.fillAmount =healthAmount/100;
     }
     public void OnTriggerEnter2D(Collider2D other){
-        this.TakeDamage(1);
+        this.TakeDamage(10);
 
     }
 }

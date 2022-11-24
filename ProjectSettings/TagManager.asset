@@ -11,6 +11,8 @@ TagManager:
   - graphseno
   - barcoenemigo
   - graph
+  - prefabtrigo
+  - prefabtrigoinstancia
   layers:
   - Default
   - TransparentFX
