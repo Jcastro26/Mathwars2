@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4420873205287352256
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4691719154159095401, guid: e7b49340c1e6f344aa1f9d38225e36cc, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691719154159095401, guid: e7b49340c1e6f344aa1f9d38225e36cc, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691719154159095401, guid: e7b49340c1e6f344aa1f9d38225e36cc, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691719154159095401, guid: e7b49340c1e6f344aa1f9d38225e36cc, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691719154159095401, guid: e7b49340c1e6f344aa1f9d38225e36cc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691719154159095401, guid: e7b49340c1e6f344aa1f9d38225e36cc, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691719154159095401, guid: e7b49340c1e6f344aa1f9d38225e36cc, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691719154159095401, guid: e7b49340c1e6f344aa1f9d38225e36cc, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 64.339966
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691719154159095401, guid: e7b49340c1e6f344aa1f9d38225e36cc, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 63.320007
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691719154159095401, guid: e7b49340c1e6f344aa1f9d38225e36cc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691719154159095401, guid: e7b49340c1e6f344aa1f9d38225e36cc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691719154159095401, guid: e7b49340c1e6f344aa1f9d38225e36cc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691719154159095401, guid: e7b49340c1e6f344aa1f9d38225e36cc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691719154159095401, guid: e7b49340c1e6f344aa1f9d38225e36cc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691719154159095401, guid: e7b49340c1e6f344aa1f9d38225e36cc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691719154159095401, guid: e7b49340c1e6f344aa1f9d38225e36cc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691719154159095401, guid: e7b49340c1e6f344aa1f9d38225e36cc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 578
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691719154159095401, guid: e7b49340c1e6f344aa1f9d38225e36cc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -356
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691719154159095401, guid: e7b49340c1e6f344aa1f9d38225e36cc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691719154159095401, guid: e7b49340c1e6f344aa1f9d38225e36cc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691719154159095401, guid: e7b49340c1e6f344aa1f9d38225e36cc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691719154159095402, guid: e7b49340c1e6f344aa1f9d38225e36cc, type: 3}
+      propertyPath: m_Name
+      value: Tangente
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691719154364128119, guid: e7b49340c1e6f344aa1f9d38225e36cc, type: 3}
+      propertyPath: m_text
+      value: 'Tan(   '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691719155436098733, guid: e7b49340c1e6f344aa1f9d38225e36cc, type: 3}
+      propertyPath: funcion
+      value: tangente
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691719155436098735, guid: e7b49340c1e6f344aa1f9d38225e36cc, type: 3}
+      propertyPath: m_Name
+      value: 'Graph '
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e7b49340c1e6f344aa1f9d38225e36cc, type: 3}

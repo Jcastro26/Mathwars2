@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4691719154159095401}
   m_Layer: 5
   m_Name: Seno
-  m_TagString: Untagged
+  m_TagString: prefabtrigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1177,7 +1177,7 @@ GameObject:
   - component: {fileID: 4691719155436098734}
   - component: {fileID: 4691719155436098733}
   m_Layer: 0
-  m_Name: Graph seno
+  m_Name: 'Graph '
   m_TagString: graph
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1192,7 +1192,7 @@ Transform:
   m_GameObject: {fileID: 4691719155436098735}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1300, y: 256.12, z: 1.0004832}
-  m_LocalScale: {x: 221.86667, y: 221.86667, z: 110.933334}
+  m_LocalScale: {x: 245, y: 79, z: 110.933334}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4691719154159095401}
@@ -1212,7 +1212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PointPrefab: {fileID: 4691719156213166499}
   resolution: 500
-  dominio: 5.5
+  dominio: 5.9
   funcion: seno
   btnClick: {fileID: 4691719154348168148}
   amplitudfield: {fileID: 4691719154453753068}
