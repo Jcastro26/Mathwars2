@@ -30,14 +30,6 @@ public class Graph : MonoBehaviour
     Boolean oprimido;
     public int i;
     public Boolean entrargraf;
-    // void Awake(){
-    //     Graficar();
-    // }
-    //funciona onlick() unity interfaz
-    // void onEnable(){
-        
-    //     //Graficar(this.funcion);
-    // }
     private void Start(){
         
         //listener click
@@ -59,11 +51,15 @@ public class Graph : MonoBehaviour
                  amplitudfield.text = "1";  
             }
             if( periodofield.text==null ||periodofield.text==""){
-        
+                if(funcion=="cuadratica"|| funcion=="lineal"|| funcion =="inversa"){
+                    periodofield.text = "0";             
+                }
+                else{
                 periodofield.text = "1";  
+                }
             }
             if( movhozfield.text==null ||movhozfield.text==""){
-        
+
                 movhozfield.text = "0";  
             }
             this.amplitud=float.Parse(amplitudfield.text);      
@@ -87,7 +83,7 @@ public class Graph : MonoBehaviour
     public  void Graficar(){
         //EditorUtility.DisplayDialog("a","Aguacate","sssas");  <-- dialogo de unity que se puede usar para avisar de errores al hacer input
                 //3f es el dominio de la funcion , la funcion se muestra de 
-        next_spawn=Time.time+0.01f;      
+        next_spawn=Time.time+0.008f;      
         //cantidad de cubos
             step = dominio/resolution;
             var scale = new Vector3(1,1,1)*step;
@@ -96,22 +92,34 @@ public class Graph : MonoBehaviour
                 point.tag="punto";
                 //vector3.right mirando a la derecha (1,0,0) dividido pro 5 f para que se junten, +0.5 para llenar y -1f para moverlo en el eje x
                 //  si a step se le resta la mitad del dominio ej:-1.5f grafica a la izquierda y derecha del orgigen, sino grafica desde ese punto a la derecha
-                position.x = ((i) + 0.5f)*step ; 
+                position.x = ((i) - 0f)*step ; 
 
                 // hace una funcion lineal f(x)=y=x 
                 //nota mental= aca se puede poder un metodo que modifique la funcion dependiendo de un parametro
                 switch(funcion){
                     case "seno":
-                        position.y= amplitud*seno(periodo*position.x);
+                        position.y= amplitud*seno(position.x);
                         break;
                     case "coseno":
-                        position.y= coseno(position.x);
+                        position.y= amplitud*coseno(periodo*position.x);
                         break;
                     case "cuadratica":
-                        position.y= (( (cuadratica(position.x ) )/5)-1)*-1;
+                        float a= amplitud;
+                        float b= periodo;
+                        float c= movhoz;
+                        position.y=  (a*(cuadratica(position.x ))+b*position.x+c );
                         break;
                     case "tangente":
-                        position.y= (( (tangente(position.x ) )));
+                        position.y= (( amplitud*tangente(periodo*position.x) ));
+                        break;
+                    case "lineal":
+                        position.y=amplitud*position.x+periodo;
+                        break;
+                    case "raiz":
+                        position.y=amplitud*(float)Math.Sqrt(periodo*position.x)+movhoz;
+                        break;
+                    case "inversa":
+                        position.y=(amplitud/position.x)+periodo;
                         break;
                 }
     
@@ -124,22 +132,22 @@ public class Graph : MonoBehaviour
                 point.localScale = (scale)*3f;
                 //hace que el padre sea el objeto graph (atra vez del atributo transform)
                 point.SetParent(transform,false);
-                next_spawn=Time.time+0.01f;
+                next_spawn=Time.time+0.008f;
     
     }
     //hacer objeto de cada uno con sus atributos
     public float seno(double x){
         //Math.Sin((Math.PI*x)-((Math.PI*0.5)));
-        return (float) Math.Sin((Math.PI*x)+((Math.PI*movhoz)/2));
+        return (float) Math.Sin((periodo*Math.PI*x)+((Math.PI*movhoz)/2));
     }
     public float cuadratica(double x){
         return (float) Math.Pow(x,2);
     }
     public float coseno(double x){
-        return (float) Math.Cos(Math.PI*x);
+        return (float) Math.Cos(Math.PI*x+((Math.PI*movhoz)/2));
     }
     public float tangente(double x){
-        return (float) Math.Tan(Math.PI*x);
+        return (float) Math.Tan(Math.PI*x+((Math.PI*movhoz)/2));
     }
     // idea nueva funcion return (float) 1/x proporcionalidad inversa
     // radical raiz y mirar como tomar solo los valores positivos o algo pro el estilo 
