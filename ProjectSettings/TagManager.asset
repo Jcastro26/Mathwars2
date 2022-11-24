@@ -10,6 +10,7 @@ TagManager:
   - punto
   - graphseno
   - barcoenemigo
+  - graph
   layers:
   - Default
   - TransparentFX

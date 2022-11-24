@@ -80,16 +80,14 @@ public class Graph : MonoBehaviour
         while(entrargraf&&Time.time>next_spawn&&i<resolution){
         Graficar();
         i++;
-        }    
-        
+        }     
         oprimido=false;
-        
     }
 
     public  void Graficar(){
         //EditorUtility.DisplayDialog("a","Aguacate","sssas");  <-- dialogo de unity que se puede usar para avisar de errores al hacer input
                 //3f es el dominio de la funcion , la funcion se muestra de 
-        next_spawn=Time.time+1.0f;      
+        next_spawn=Time.time+0.01f;      
         //cantidad de cubos
             step = dominio/resolution;
             var scale = new Vector3(1,1,1)*step;
@@ -127,9 +125,6 @@ public class Graph : MonoBehaviour
                 //hace que el padre sea el objeto graph (atra vez del atributo transform)
                 point.SetParent(transform,false);
                 next_spawn=Time.time+0.01f;
-                
-        
-        
     
     }
     //hacer objeto de cada uno con sus atributos
