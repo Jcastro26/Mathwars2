@@ -1,11 +1,10 @@
-
 using System.Collections;
 using UnityEngine;
 using TMPro; // crear referencia de textm pro
 
-public class Dialog_Newtu : MonoBehaviour
+public class DialogFinn : MonoBehaviour
 {
-   //creamos referencias para los clip de audio
+    //creamos referencias para los clip de audio
    [SerializeField] private AudioClip npcVoice; // efectos de audio del npc
    [SerializeField] private AudioClip playerVoice; // efectos de sonido para el player pero en esta caso no hablo entonces los omitimos
    [SerializeField] private float typingTime; //la serializamos para poder editarla desde unity en el inspector
@@ -61,7 +60,7 @@ public class Dialog_Newtu : MonoBehaviour
          dialogueMark.SetActive(false); // desactiva la negacion que se usó con el signo de exclamación ya que inicó la conver.
          lineIndex = 0; // para que con cada cambio de linea de texto se muestre la primera linea de cada texto
          Time.timeScale = 0.5f; //para que cuando inicie el dialogo no se mueva
-         StartCoroutine(ShowLine());
+         StartCoroutine(ShowLine2());
    }
 
     private void NextDialogueLine() // para tipear las lineas siguiente
@@ -69,7 +68,7 @@ public class Dialog_Newtu : MonoBehaviour
           lineIndex++; // aunmentamos el indice para tipear la siguiente
           if (lineIndex <dialogueLines.Length) // si el indice es menor a las lineas tendrá que seguir
           {
-              StartCoroutine (ShowLine()); //inicia la corutina hasta que no haya más lineas
+              StartCoroutine (ShowLine2()); //inicia la corutina hasta que no haya más lineas
 
           }
           else
@@ -83,26 +82,19 @@ public class Dialog_Newtu : MonoBehaviour
 
    private void SelectAudioClip()
    {
-      if(lineIndex != 0)
+      if(lineIndex != 0) //esto es para reproducir audio alternado
       {
          isPlayerTalking = !isPlayerTalking;
       }
       
       audioSource.clip = isPlayerTalking ? playerVoice : npcVoice; // operador ternario otra forma de alternar audio, es equivalente al if
 
-      /*if (isPlayerTalking)
-      {
-         audioSource.clip = playerVoice;
-      }
-      else
-      {
-         audioSource.clip = npcVoice;
-      } una forma para alternar el audio*/ 
+       
    }
 
 
     //con esto que haremos como toca mostrar la primera linea, la haremos tipeada
-    private IEnumerator ShowLine()
+    private IEnumerator ShowLine2()
     {
       SelectAudioClip();
       dialogueText.text = string.Empty;
@@ -110,7 +102,7 @@ public class Dialog_Newtu : MonoBehaviour
 
       foreach (char ch in dialogueLines[lineIndex])
       {
-         dialogueText.text += ch;
+        dialogueText.text += ch;
          
          if (charIndex % charsToPlaySound == 0)//para reproducir sonido, se le conoce como modulo, devuel la division entera para reproducir y ssi es entero cada 3 si el charstoplay sound se define en 3
          {
@@ -144,6 +136,4 @@ public class Dialog_Newtu : MonoBehaviour
        
 
      }
-
 }
-
