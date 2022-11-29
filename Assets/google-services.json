@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "288072954451",
+    "project_id": "mathwars-5d1b5",
+    "storage_bucket": "mathwars-5d1b5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:288072954451:android:60e43b991b802c0a2b8ca6",
+        "android_client_info": {
+          "package_name": "com.mathwars"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "288072954451-4fhe7p9nshqsnlst49mk70rg1dj9blbb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUyHP4_xC5LcAwKPC4-8Vp7ohz4ETtqL8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "288072954451-4fhe7p9nshqsnlst49mk70rg1dj9blbb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
