@@ -19,27 +19,23 @@ public class FireBase : MonoBehaviour
      [SerializeField] public TMP_InputField loginnombre = null;
      [SerializeField] private TMP_InputField loginPass  = null;
      [SerializeField] private Text loginerror  = null;
-     [SerializeField] private Text nombreplayer ;
-    [SerializeField] public GameObject zonaPlayer;
-    [SerializeField] public GameObject zonaIniciar; 
-        int i;
+     [SerializeField] private GameObject m_LoginUI = null;
+     [SerializeField] private GameObject canvasmenu = null;
+     [SerializeField] private TMP_Text nombrejugador  = null;
+     [SerializeField] private TMP_Text iniciarsesionbotontexto  = null;
+     
+     int i;
      public string nombreactual="0";
     void Start()
     {
          db = FirebaseFirestore.DefaultInstance;
-        if(nombreactual==""){
-            zonaIniciar.SetActive(true);
-        }
-        else{
-            zonaPlayer.SetActive(true);
-            nombreplayer.text="Bienvenido "+nombreactual;
-        }        
+         getSizeplusone();  
 
     }
     public void addData(){
     REGISTROERROR.text="Procesando...";
     CollectionReference coleccionreference= db.Collection("usuarios");
-      
+     
         
         
     DocumentReference docRef = db.Collection("usuarios").Document(i.ToString());
@@ -59,6 +55,7 @@ public class FireBase : MonoBehaviour
 
         if (registroPass.text == registroPass2.text)//si clave 1 es igual a clave 2
         {
+                
                 addData();
         }
         
@@ -75,9 +72,7 @@ public class FireBase : MonoBehaviour
         QuerySnapshot snapshot = task.Result;
         foreach (DocumentSnapshot document in snapshot.Documents)
         {
-
                 Debug.Log(String.Format("User: {0}", document.Id)); 
-                
                 Dictionary<string,object> documentdict=document.ToDictionary();
                 if(loginnombre.text==documentdict["Nombre"].ToString()&&loginPass.text!=documentdict["Password"].ToString()){
                         loginerror.text="La contraseña ingresada es incorrecta";
@@ -85,10 +80,14 @@ public class FireBase : MonoBehaviour
                 } 
                 if (loginPass.text==documentdict["Password"].ToString()&&loginnombre.text==documentdict["Nombre"].ToString()) {
                         nombreactual=documentdict["Nombre"].ToString();
+                        nombrejugador.text="Bienvenido "+nombreactual;
+                        iniciarsesionbotontexto.text="Cambiar cuenta";
+                        m_LoginUI.SetActive(false);
+                        canvasmenu.SetActive(true);
                         Debug.Log("El nombre está en la base de datos");
                         Debug.Log("La contraseña está en la base de datos");
                 }
-                else if(loginPass.text!=documentdict["Password"].ToString()&&loginnombre.text!=documentdict["Nombre"].ToString()){
+                if(loginPass.text!=documentdict["Password"].ToString()&&loginnombre.text!=documentdict["Nombre"].ToString()){
                         loginerror.text="No se encuentra registrado";
                 }
 
@@ -105,7 +104,5 @@ public class FireBase : MonoBehaviour
         Debug.Log(i);
 
     }
-    public void login(){
 
-    }
 }

@@ -237,7 +237,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 63866909}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.18, y: 3.17, z: -5400}
+  m_LocalPosition: {x: -0.18, y: 3.17, z: 0}
   m_LocalScale: {x: 197.1, y: 168.61028, z: 60}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2729,6 +2729,10 @@ MonoBehaviour:
   loginnombre: {fileID: 1307388945}
   loginPass: {fileID: 720351402}
   loginerror: {fileID: 1968258777}
+  nombreplayer: {fileID: 0}
+  zonaPlayer: {fileID: 0}
+  zonaIniciar: {fileID: 0}
+  nombreactual: 0
 --- !u!1 &1151047762
 GameObject:
   m_ObjectHideFlags: 0

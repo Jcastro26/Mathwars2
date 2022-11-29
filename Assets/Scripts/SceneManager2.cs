@@ -8,6 +8,8 @@ public class SceneManager2 : MonoBehaviour
 
      [SerializeField] private GameObject m_registroUi          = null;
      [SerializeField] private GameObject m_LoginUI             = null;
+     [SerializeField] private GameObject Canvasmenu             = null;
+     [SerializeField] private GameObject Canvaslogin            = null;
 
 
     public void ShowLogin()
@@ -24,4 +26,10 @@ public class SceneManager2 : MonoBehaviour
      m_LoginUI.SetActive(false);;//para NO mostrar la ui usuario
 
      }
+     public void ShowloginMenu(){
+          
+          Canvasmenu.SetActive(false);
+          
+          Canvaslogin.SetActive(true);
+     } 
 }
