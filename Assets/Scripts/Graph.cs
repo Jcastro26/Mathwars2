@@ -30,6 +30,7 @@ public class Graph : MonoBehaviour
     Boolean oprimido;
     public int i;
     public Boolean entrargraf;
+    public Boolean borrarultpuntos=false;
     private void Start(){
         
         //listener click
@@ -40,9 +41,20 @@ public class Graph : MonoBehaviour
         // cuando se oprime destruye el grafico anterior
         if(oprimido){
             var puntos = GameObject.FindGameObjectsWithTag ("punto");
+            var ultimospuntos =GameObject.FindGameObjectsWithTag("lastpunto");
+                foreach(var ultimopunto in ultimospuntos){
+                        Destroy(ultimopunto);
+                }
+            
             foreach(var punto in puntos){
-                        Destroy(punto);
+                        Color colorpunto= punto.GetComponent<SpriteRenderer>().color;
+                        colorpunto.a=0.42f;
+                        punto.GetComponent<SpriteRenderer>().color=colorpunto;
+                        punto.tag="lastpunto";
+                        borrarultpuntos=true;
+                        //Destroy(punto);
             }
+
             i=0;
             Debug.Log("Hola de mar");
             // si no se ha ingresado nada en el input field se pone en default
