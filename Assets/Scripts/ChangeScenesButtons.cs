@@ -12,4 +12,7 @@ public class ChangeScenesButtons : MonoBehaviour
      public void LoadScene(int sceneName){
          SceneManager.LoadScene(sceneName);
     }
+    public void cerrarJuego(){
+        Application.Quit();
+    }
 }
