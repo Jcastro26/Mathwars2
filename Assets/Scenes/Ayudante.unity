@@ -836,7 +836,7 @@ MonoBehaviour:
   - "Newton: \xBFHola? ...."
   - "T\xFA: \xA1Hola Newton! NECESITO TU AYUDA"
   - "Newton:  \xBFQu\xE9 carajos hago aqu\xED? "
-  - "T\xFA: NECESITO TU AYUDA"
+  - "T\xFA: NECESITO TU AYUDA ._."
   - 'Newton: Ya me lo imaginaba, por supuesto soy el mejor de todos :)'
   - "T\xFA: Si, s\xED. \xBFpodrias empezar explicandome sobre las funciones polinomicas
     de primer grado?"
@@ -864,7 +864,7 @@ MonoBehaviour:
   - "T\xFA: Decimos que es la inclinaci\xF3n con respecto al eje de abscisas \xBFcorrecto?"
   - "Newton: Exacto y por ella tenemos 3 definiciones.\n1. Si m>0 pues la pendiente
     va ser positiva y tiene una inclinaci\xF3n notable hacia arriba"
-  - "T\xFA: entonces seria como una inclanaci\xF3n hacia la derecha :O"
+  - "T\xFA: Entonces seria como una inclanaci\xF3n hacia la derecha :O"
   - "Newton: Epaaaa, eres piloso. Ahora tenemos la segunda condici\xF3n. \n2. Si
     m=0 pues la pendiente va ser neutra y es una linea horizontal"
   - "T\xFA: Wow, no es tan complicado. Esto lo puedo relacionar con las constantes"
@@ -875,7 +875,8 @@ MonoBehaviour:
     eje y?\n"
   - "T\xFA: Es el punto donde interseca en el eje de las coordenadas, jsjsjsjs. \nMuchas
     gracias, Newton"
-  - 'Newton: con gusto, vuelve pronto'
+  - 'Newton: Con gusto, vuelve pronto'
+  - "Newton: Finn podr\xE1 regalarte nuevos consejos :]"
 --- !u!82 &149876446
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3771,7 +3772,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.07845563, y: 0.0059213117}
+  m_Offset: {x: 0.06824359, y: 0.0028001666}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3782,7 +3783,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.61361194, y: 0.4769507}
+  m_Size: {x: 0.47647923, y: 0.40204388}
   m_EdgeRadius: 0
 --- !u!212 &1859992796
 SpriteRenderer:
@@ -3844,8 +3845,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1859992790}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -821.87994, y: -379.08, z: -3164.4001}
-  m_LocalScale: {x: 827.6117, y: 793.3457, z: 0.48534143}
+  m_LocalPosition: {x: -794.12, y: -355.71, z: -3164.4001}
+  m_LocalScale: {x: 1001.41016, y: 936.1479, z: 0.48534143}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 678158346}
@@ -3865,7 +3866,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.05278992, y: 0.005268723}
+  m_Offset: {x: 0.057166502, y: 0.005268723}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3876,7 +3877,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.387339, y: 0.31500846}
+  m_Size: {x: 0.39609215, y: 0.31500846}
   m_EdgeRadius: 0
 --- !u!114 &1859992799
 MonoBehaviour:
@@ -3909,6 +3910,7 @@ MonoBehaviour:
     acompa\xF1a a h. Como ejemplo concreto, veamos una funci\xF3n cuadratica f(x)=
     x^2 . Si construimos una funci\xF3n g(x)=f(x+4) lo que debemos hacer es poner
     x+3 all\xE1 donde veamos x en f(x). As\xED pues g(x)=f(x+4)=(x+4)^2."
+  - ' Finn: Por ahora es lo necesario para qu logres jugar :)'
 --- !u!1 &1908638545
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ public class Dialog_Eins : MonoBehaviour
     [SerializeField] private GameObject Fallastetexto;   
     [SerializeField] private GameObject DialogBombi; 
     [SerializeField] private GameObject dialoguePanel; // para activar y desactivar
+   [SerializeField] private GameObject dialoguePanel2; // para activar y desactivar
     [SerializeField] private TMP_Text dialogueText;
     [SerializeField, TextArea(4,6)] private string [] dialogueLines; //es para crear las lineas de texto, al parecer el serializeField crea espacios para modificar en el unity
     // el textArea es para delimitar un limite min y max de lineas
@@ -41,7 +42,7 @@ public class Dialog_Eins : MonoBehaviour
        var puntos = GameObject.FindGameObjectsWithTag ("punto");
       foreach(var punto in puntos){
          if(punto.transform.position.x>=5.1f){
-         dialoguePanel.SetActive(true); 
+         dialoguePanel2.SetActive(true); 
          Fallastetexto.SetActive(true);
          }
          
