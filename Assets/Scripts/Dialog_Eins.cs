@@ -13,6 +13,7 @@ public class Dialog_Eins : MonoBehaviour
     [SerializeField, TextArea(4,6)] private string [] dialogueLines;
     public GameObject gameover;
     public GameObject juego;
+    public GameObject victoria;
      //es para crear las lineas de texto, al parecer el serializeField crea espacios para modificar en el unity
     // el textArea es para delimitar un limite min y max de lineas
    
@@ -24,6 +25,7 @@ public class Dialog_Eins : MonoBehaviour
    float healthAmount= 250;
    bool fallo=false;
    public float next_spawn;
+   int x=0;
      void Update() //deteccion para empezar dialogo
     {
        if (isPlayerInRange && Input.GetButtonDown("Fire1")) 
@@ -45,7 +47,7 @@ public class Dialog_Eins : MonoBehaviour
          
        }
        var puntos = GameObject.FindGameObjectsWithTag ("punto");
-      
+      //verifica derrota
       foreach(var punto in puntos){
          if(punto.transform.position.x>=5.01f &&punto.transform.position.x<=5.02f&&!fallo){
          dialoguePanel2.SetActive(true); 
@@ -69,8 +71,22 @@ public class Dialog_Eins : MonoBehaviour
          }
          
       }
-      
-
+      //verifica victoria
+        
+        var barcoenemigos = GameObject.FindGameObjectsWithTag ("barcoenemigo");
+        foreach(var barcoenemigo in barcoenemigos){
+                if(barcoenemigo.GetComponent<Barco>().healthAmount<=0){
+                    
+                    x++;
+                    Debug.Log(x);
+                    barcoenemigo.SetActive(false);
+                }    
+        }
+        if(x>=3){
+            Debug.Log("MORTIS");
+            victoria.SetActive(true);
+            juego.SetActive(false);
+        }
 
     }
 

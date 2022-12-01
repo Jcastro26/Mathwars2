@@ -28,8 +28,9 @@ public class Barco : MonoBehaviour
         healthBar.fillAmount =healthAmount/100;
     }
     public void OnTriggerEnter2D(Collider2D other){
-        this.TakeDamage(10);
-
+        if(other.tag=="punto"){
+        this.TakeDamage(30);
+        }
     }
 }
 

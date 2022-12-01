@@ -15,6 +15,7 @@ TagManager:
   - prefabtrigoinstancia
   - login
   - lastpunto
+  - vidaenemiga
   layers:
   - Default
   - TransparentFX

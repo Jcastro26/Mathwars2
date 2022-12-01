@@ -134,7 +134,10 @@ public class Graph : MonoBehaviour
                         position.y=(amplitud/position.x)+periodo;
                         break;
                 }
-    
+                //resuelve bug que da infinito en funcion inversa
+                if(position.y==Mathf.Infinity){
+                    position.y=50;
+                }
                 //position.y=position.x; // funcion lineal y=x
 
                 //asigna el vector posicion a el punto 
