@@ -18,9 +18,6 @@ public class Barco : MonoBehaviour
     void Update()
     {
 
-        if(Input.GetKeyDown(KeyCode.E)){
-            TakeDamage(20);
-        }
     }
 
 

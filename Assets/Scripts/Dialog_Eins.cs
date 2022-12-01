@@ -1,15 +1,19 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro; // crear referencia de textm pro
 
 public class Dialog_Eins : MonoBehaviour
-{
+{  public Image healthBar;
     [SerializeField] private GameObject Fallastetexto;   
     [SerializeField] private GameObject DialogBombi; 
     [SerializeField] private GameObject dialoguePanel; // para activar y desactivar
    [SerializeField] private GameObject dialoguePanel2; // para activar y desactivar
     [SerializeField] private TMP_Text dialogueText;
-    [SerializeField, TextArea(4,6)] private string [] dialogueLines; //es para crear las lineas de texto, al parecer el serializeField crea espacios para modificar en el unity
+    [SerializeField, TextArea(4,6)] private string [] dialogueLines;
+    public GameObject gameover;
+    public GameObject juego;
+     //es para crear las lineas de texto, al parecer el serializeField crea espacios para modificar en el unity
     // el textArea es para delimitar un limite min y max de lineas
    
    private float typingTime = 0.05f; //creamos esta variabla para sarla como parametro
@@ -17,8 +21,9 @@ public class Dialog_Eins : MonoBehaviour
    private bool isPlayerInRange; //principalmente creamos un buleano nos indicara si está cerc del npc
    private bool didDialogueStart; // indica si el dialogo comienza si es verdadero que el jugador esta cerca
    private int lineIndex; // para saber que linea de dialogo está mostrando
-
-   
+   float healthAmount= 250;
+   bool fallo=false;
+   public float next_spawn;
      void Update() //deteccion para empezar dialogo
     {
        if (isPlayerInRange && Input.GetButtonDown("Fire1")) 
@@ -40,13 +45,32 @@ public class Dialog_Eins : MonoBehaviour
          
        }
        var puntos = GameObject.FindGameObjectsWithTag ("punto");
+      
       foreach(var punto in puntos){
-         if(punto.transform.position.x>=5.1f){
+         if(punto.transform.position.x>=5.01f &&punto.transform.position.x<=5.02f&&!fallo){
          dialoguePanel2.SetActive(true); 
          Fallastetexto.SetActive(true);
+            next_spawn=Time.time+5f;
+            healthAmount-=20;
+            healthBar.fillAmount =healthAmount/250;
+            if (healthAmount <=0){
+               gameover.SetActive(true);
+               juego.SetActive(false);
+            }
+            fallo=true;
+            Debug.Log(healthAmount);
+            Destroy(punto);
+            
+         }
+         if(Time.time>next_spawn&&fallo){
+         dialoguePanel2.SetActive(false); 
+         Fallastetexto.SetActive(false); 
+         fallo=false;         
          }
          
       }
+      
+
 
     }
 
