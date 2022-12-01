@@ -48,7 +48,7 @@ public class Graph : MonoBehaviour
             
             foreach(var punto in puntos){
                         Color colorpunto= punto.GetComponent<SpriteRenderer>().color;
-                        colorpunto.a=0.42f;
+                        colorpunto.a=0.2f;
                         punto.GetComponent<SpriteRenderer>().color=colorpunto;
                         punto.tag="lastpunto";
                         borrarultpuntos=true;

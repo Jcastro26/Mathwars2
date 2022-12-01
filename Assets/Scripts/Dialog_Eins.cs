@@ -4,7 +4,7 @@ using TMPro; // crear referencia de textm pro
 
 public class Dialog_Eins : MonoBehaviour
 {
-   
+    [SerializeField] private GameObject Fallastetexto;   
     [SerializeField] private GameObject DialogBombi; 
     [SerializeField] private GameObject dialoguePanel; // para activar y desactivar
     [SerializeField] private TMP_Text dialogueText;
@@ -38,7 +38,14 @@ public class Dialog_Eins : MonoBehaviour
          }
          
        }
-    
+       var puntos = GameObject.FindGameObjectsWithTag ("punto");
+      foreach(var punto in puntos){
+         if(punto.transform.position.x>=5.1f){
+         dialoguePanel.SetActive(true); 
+         Fallastetexto.SetActive(true);
+         }
+         
+      }
 
     }
 
