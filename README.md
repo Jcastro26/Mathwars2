@@ -62,7 +62,7 @@ Universidad Nacional de Colombia
       1 <b>Jugador</b><br> 
         Es el barco el cual vamos a manejar y el cual tenemos que cuidar ya que cuenta con una barra que muestra la municion que tenemos actualmente si se nos acaba perdemos el juego.<br>
         2 <b>Enemigo</b><br> 
-            Tenemos que atacar a los barcos enemigos con ayuda de las funciones disponibles, para esto debemos modificar los valores de las funcionos y asi poder acertar.(Esto se explica mas a  detalle en la seccion [Zona de ataque](#zona-de-ataque)) <br>
+            Tenemos que atacar a los barcos enemigos con ayuda de las funciones disponibles, para esto debemos modificar los valores de las funciones y asi poder acertar.(Esto se explica mas a  detalle en la seccion [Zona de ataque](#zona-de-ataque)) <br>
         3 <b>Plano de ataque</b><br>  Son nuestras coordenadas de referencia para poder calcular que ajustes debemos hacer en la función para logarar un disparo exitoso.<br>
         4 <b>Menú de pausa</b><br>
             Despliega un menú donde se puede ajustar el volumen y volver al menú principal.   <br>
