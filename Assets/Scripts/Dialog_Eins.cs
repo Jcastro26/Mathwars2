@@ -49,7 +49,7 @@ public class Dialog_Eins : MonoBehaviour
        var puntos = GameObject.FindGameObjectsWithTag ("punto");
       //verifica derrota
       foreach(var punto in puntos){
-         if(punto.transform.position.x>=5.01f &&punto.transform.position.x<=5.02f&&!fallo){
+         if(punto.transform.position.x>=5.005f &&punto.transform.position.x<=5.03f&&!fallo){
          dialoguePanel2.SetActive(true); 
          Fallastetexto.SetActive(true);
             next_spawn=Time.time+5f;
