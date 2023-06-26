@@ -2,9 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class Punto : MonoBehaviour
 {
+    private float puntos;  //puntos que tendremos
+
+    private TextMeshProUGUI textMesh;//controlar el componende texto
+
     Collider2D ccollider;
     Boolean entrareliminar;
   
@@ -33,7 +37,16 @@ public class Punto : MonoBehaviour
              }
 
          }
-    void Update(){
-
+    private void Start() // 
+    {
+        textMesh = GetComponent<TextMeshProUGUI>();
     }
+    // lo siguiente es para que a cada segundo vaya aunmentado pero de manera controlada
+
+
+    public void SumarPuntos(float puntosEntrada)
+    {
+        puntos += puntosEntrada;
+    }
+
 }

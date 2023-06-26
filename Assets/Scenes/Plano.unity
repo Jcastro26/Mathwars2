@@ -1854,6 +1854,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88272937fdce4c74bb7cd9e2e143c7a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cantidadPuntos: 50
+  puntaje: {fileID: 1942319236}
   healthBar: {fileID: 879492833}
   healthAmount: 100
 --- !u!50 &767180494
@@ -2878,6 +2880,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88272937fdce4c74bb7cd9e2e143c7a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cantidadPuntos: 100
+  puntaje: {fileID: 1942319236}
   healthBar: {fileID: 414682283}
   healthAmount: 100
 --- !u!50 &1120093016
@@ -4521,6 +4525,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88272937fdce4c74bb7cd9e2e143c7a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cantidadPuntos: 100
+  puntaje: {fileID: 1942319236}
   healthBar: {fileID: 670272992}
   healthAmount: 100
 --- !u!1 &1521888988
