@@ -927,9 +927,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1118893155}
-        m_TargetAssemblyTypeName: FireBase, Assembly-CSharp
-        m_MethodName: getSizeplusone
+      - m_Target: {fileID: 1118893156}
+        m_TargetAssemblyTypeName: Registro, Assembly-CSharp
+        m_MethodName: LoginUser
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2638,6 +2638,7 @@ GameObject:
   - component: {fileID: 1118893152}
   - component: {fileID: 1118893151}
   - component: {fileID: 1118893155}
+  - component: {fileID: 1118893156}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2723,6 +2724,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4db47d577408f94e99c5d7bc7867462, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1118893156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118893150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71d804b726e2b4540b3312ae0767154f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   registronombre: {fileID: 517111358}
   registroEmail: {fileID: 1906351154}
   registroPass: {fileID: 1888258834}
@@ -2735,7 +2748,6 @@ MonoBehaviour:
   canvasmenu: {fileID: 0}
   nombrejugador: {fileID: 0}
   iniciarsesionbotontexto: {fileID: 0}
-  nombreactual: 0
 --- !u!1 &1151047762
 GameObject:
   m_ObjectHideFlags: 0
@@ -6295,9 +6307,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1118893155}
-        m_TargetAssemblyTypeName: FireBase, Assembly-CSharp
-        m_MethodName: SubmitRegister
+      - m_Target: {fileID: 1118893156}
+        m_TargetAssemblyTypeName: Registro, Assembly-CSharp
+        m_MethodName: RegisterUser
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
