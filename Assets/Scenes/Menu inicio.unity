@@ -1456,9 +1456,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1201951902}
-        m_TargetAssemblyTypeName: FireBase, Assembly-CSharp
-        m_MethodName: SubmitRegister
+      - m_Target: {fileID: 519420033}
+        m_TargetAssemblyTypeName: Registro, Assembly-CSharp
+        m_MethodName: RegisterUser
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3228,6 +3228,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3301,6 +3302,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71d804b726e2b4540b3312ae0767154f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  registronombre: {fileID: 677585084}
+  registroEmail: {fileID: 674009331}
+  registroPass: {fileID: 600483990}
+  registroPass2: {fileID: 1869183792}
+  REGISTROERROR: {fileID: 2100700740}
+  loginnombre: {fileID: 367574332}
+  loginPass: {fileID: 1945145673}
+  loginerror: {fileID: 953686453}
+  m_LoginUI: {fileID: 1919809781}
+  canvasmenu: {fileID: 1201951897}
+  nombrejugador: {fileID: 695792303}
+  iniciarsesionbotontexto: {fileID: 0}
 --- !u!1 &547387590
 GameObject:
   m_ObjectHideFlags: 0
@@ -6348,7 +6373,7 @@ GameObject:
   - component: {fileID: 1113887357}
   - component: {fileID: 1113887356}
   m_Layer: 5
-  m_Name: Login
+  m_Name: Login1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6888,19 +6913,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4db47d577408f94e99c5d7bc7867462, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  registronombre: {fileID: 677585084}
-  registroEmail: {fileID: 674009331}
-  registroPass: {fileID: 600483990}
-  registroPass2: {fileID: 1869183792}
-  REGISTROERROR: {fileID: 2100700740}
-  loginnombre: {fileID: 367574332}
-  loginPass: {fileID: 1945145673}
-  loginerror: {fileID: 953686453}
-  m_LoginUI: {fileID: 1113887353}
-  canvasmenu: {fileID: 1919809781}
-  nombrejugador: {fileID: 695792303}
-  iniciarsesionbotontexto: {fileID: 1445207207}
-  nombreactual: 0
 --- !u!1 &1267388469
 GameObject:
   m_ObjectHideFlags: 0
@@ -8797,9 +8809,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1201951902}
-        m_TargetAssemblyTypeName: FireBase, Assembly-CSharp
-        m_MethodName: getSizeplusone
+      - m_Target: {fileID: 519420033}
+        m_TargetAssemblyTypeName: Registro, Assembly-CSharp
+        m_MethodName: LoginUser
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
